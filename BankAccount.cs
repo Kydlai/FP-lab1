@@ -7,15 +7,15 @@ public abstract class BankAccount
     private string? _ownerName;
     private decimal? _balance;
 
-    private string AccountNumber{get;}
-    private decimal? balance
+    public string? AccountNumber{get => _accountNumber;}
+    public decimal? Balance
     {
-        get; 
+        get => _balance; 
         set
         {
-            if(balance is null)
+            if(_balance is null)
                 throw new ArgumentException("balance must exist");
-            else if(balance < 0)
+            else if(_balance < 0)
                 throw new ArgumentException("balance can't be negative");
 
             else
@@ -23,10 +23,11 @@ public abstract class BankAccount
 
         }
     }
-    private string OwnerName
+    public string? OwnerName
     {
-        get; 
-        set{
+        get => _ownerName; 
+        set
+        {
             if(value is null || value.Length == 0)
                 throw new ArgumentException("ownerName must exist");
             else
@@ -34,10 +35,23 @@ public abstract class BankAccount
         }
     }
 
-    public abstract decimal calculateInterest();
-    public virtual void deposit(decimal amount)
+    public abstract decimal CalculateInterest();
+    public virtual void Deposit(decimal? amount)
     {
-        
+        if(amount is null || amount <= 0)
+            throw new ArgumentException("deposit must be more than 0");
+        _balance += amount;
+        Console.WriteLine("A deposit of " + amount + " roubles been made to the account");
+    }
+
+    public virtual void Withdraw(decimal? amount)
+    {
+        if(amount is null || amount <= 0)
+            throw new ArgumentException("deposit must be more than 0");
+        if(amount > _balance)
+            throw new ArgumentException("U can't withdraw more than balance");
+        _balance -= amount;
+        Console.WriteLine(amount + " rubles were withdrawn from the account");
     }
 
  
