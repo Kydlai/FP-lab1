@@ -54,5 +54,6 @@ public abstract class BankAccount
         Console.WriteLine(amount + " rubles were withdrawn from the account");
     }
 
+    
  
 }

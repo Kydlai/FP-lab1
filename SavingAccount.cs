@@ -1,5 +1,6 @@
 using System;
-using SavingAccountTypesDictionary = Dictionary<SavingAccountType, (decimal withdrawLimit, uint operationLimit, decimal overLimitWithdrawPenalty, decimal lowerInterestRate, uint lowerInterestDelay)>;
+using System.Dynamic;
+using SavingAccountTypesDictionary = System.Collections.Generic.Dictionary<SavingAccountType, (decimal? withdrawLimit, uint? operationLimit, decimal? overLimitWithdrawPenalty, decimal interestRate, decimal? lowerInterestRate, uint? lowerInterestDelay)>;
 
 public enum SavingAccountType
 {
@@ -10,30 +11,63 @@ public enum SavingAccountType
 
 public class SavingAccount : BankAccount
 {
-    private decimal _withdrawLimit; // не более withdrawLimit рублей снятие за операцию
-    private uint _operationLimit; // не более operationLimit снятий за месяц. Превышение
-    private uint _operationsCounter = 0; // количество произведенных операций за текущий месяц
-    private DateOnly? _lastOperationDate = null, _lastOverlimitOperationDate = null;
-    private decimal _overlimitWithdrawPenalty; // Штраф за снятие вне лимита
-    private decimal _lowerInterestRate; // Процентная ставка, которая будет применена при большом количестве снятий вне лимита
-    private uint _lowerInterestDelay; // Количество снятий за год до применения пониженной ставки
-    
-
-    public uint WithdrawLimit{get;}
-    public uint OperationLimit{get;}
-
+    /// <summary>
+    /// не более withdrawLimit рублей снятие за операцию
+    /// </summary>
+    public decimal? WithdrawLimit{get; init;} 
+    /// <summary>
+    /// не более operationLimit снятий за месяц.
+    /// </summary>
+    public uint? OperationLimit{get; init;}
+    /// <summary>
+    /// количество произведенных операций за текущий месяц
+    /// </summary>
+    public uint OperationCounter{get; private set;}
+    public DateOnly? LastOperationDate{get; private set;} 
+    public DateOnly? LastOverlimitOperationDate{get; private set;}
+    /// <summary>
+    /// Доля штрафа от суммы за снятие вне лимита, от 0 до 1
+    /// </summary>
+    public decimal? OverlimitWithdrawPenalty{get; init;}
+    public decimal InterestRate{get; init;}
+    /// <summary>
+    /// Процентная ставка, которая будет применена при большом количестве снятий вне лимита
+    /// </summary>
+    public decimal? LowerInterestRate{get; init;}
+    /// <summary>
+    /// Количество превышенных снятий за год до применения пониженной ставки
+    /// </summary>
+    private uint? LowerInterestDelay{get; init;}
     private static readonly SavingAccountTypesDictionary _accountTypes = new SavingAccountTypesDictionary
         {
-            {SavingAccountType.AnytimeAvailable, ()}
+            {SavingAccountType.AnytimeAvailable, (500000m, null, null, 7.2m, null, null)},
+            {SavingAccountType.ContiniousUse, (100000m, 20, 0.05m, 8.9m, 6.9m, 20)},
+            {SavingAccountType.LongTerm, (50000m, 3, 0.25m, 11.6m, 7.2m, 5)}  
         };
 
     public SavingAccount(SavingAccountType accountType)
     {
-        
+        var typeData = _accountTypes[accountType];
+        WithdrawLimit = typeData.withdrawLimit;
+        OperationLimit = typeData.operationLimit;
+        OverlimitWithdrawPenalty = typeData.overLimitWithdrawPenalty;
+        InterestRate = typeData.interestRate;
+        LowerInterestRate = typeData.lowerInterestRate;
+        LowerInterestDelay = typeData.lowerInterestDelay;
     }
 
     public override decimal CalculateInterest()
     {
-        throw new NotImplementedException();
+        if(OperationCounter > )
+    }
+
+    public void Withdraw(decimal? amount)
+    {
+        if(amount is null || amount <= 0)
+            throw new ArgumentException("deposit must be more than 0");
+        if(amount > _balance)
+            throw new ArgumentException("U can't withdraw more than balance");
+        // _balance -= amount;
+        Console.WriteLine(amount + " rubles were withdrawn from the account");
     }
 }
