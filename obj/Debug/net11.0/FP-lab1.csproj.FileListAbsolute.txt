@@ -1,0 +1,17 @@
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.exe
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.deps.json
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.runtimeconfig.json
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.runtimeconfig.dev.json
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.dll
+D:\ProgApps\DonSTU\5-term\FP-lab1\bin\Debug\net11.0\FP-lab1.pdb
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.AssemblyInfoInputs.cache
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.AssemblyInfo.cs
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.csproj.CoreCompileInputs.cache
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.sourcelink.json
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.dll
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\refint\FP-lab1.dll
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.pdb
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.genruntimeconfig.cache
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\ref\FP-lab1.dll
+D:\ProgApps\DonSTU\5-term\FP-lab1\obj\Debug\net11.0\FP-lab1.csproj.Up2Date

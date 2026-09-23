@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FP-lab1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b54eb488ceeb965e1d72ec1fd09257ddfac6496")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c213757c148e0e78c03264d18b6cdb763bfb754")]
 [assembly: System.Reflection.AssemblyProductAttribute("FP-lab1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FP-lab1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

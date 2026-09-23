@@ -8,24 +8,32 @@
     "net11.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kudl2\\.nuget\\packages\\": {}
+    "C:\\Users\\KydlaiInc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProgApps\\DonSTU\\5-term\\FunctionalProgramming\\FP-lab1\\FP-lab1.csproj",
+      "projectUniqueName": "D:\\ProgApps\\DonSTU\\5-term\\FP-lab1\\FP-lab1.csproj",
       "projectName": "FP-lab1",
-      "projectPath": "D:\\ProgApps\\DonSTU\\5-term\\FunctionalProgramming\\FP-lab1\\FP-lab1.csproj",
-      "packagesPath": "C:\\Users\\kudl2\\.nuget\\packages\\",
-      "outputPath": "D:\\ProgApps\\DonSTU\\5-term\\FunctionalProgramming\\FP-lab1\\obj\\",
+      "projectPath": "D:\\ProgApps\\DonSTU\\5-term\\FP-lab1\\FP-lab1.csproj",
+      "packagesPath": "C:\\Users\\KydlaiInc\\.nuget\\packages\\",
+      "outputPath": "D:\\ProgApps\\DonSTU\\5-term\\FP-lab1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kudl2\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\KydlaiInc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net11.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
